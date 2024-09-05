@@ -1,0 +1,11 @@
+http:
+ address: "localhost:4000"
+ timeout: 4s
+ idle_timeout: 60s
+database:
+  port: "5432"
+  host: "pg_database"
+  name: "postgres"
+  user: "postgres"
+  password: "root"
+  db_name: "tasks"

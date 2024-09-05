@@ -1,0 +1,28 @@
+version: "3.0"
+
+services:
+  tasks:
+    build:
+      context: .
+    container_name: tasks
+    ports:
+      - 4000:4000
+    depends_on:
+      - pg_database
+    restart: always
+
+  pg_database:
+    container_name: pg_database
+    image: postgres
+    environment:
+      POSTGRES_DB: tasks
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5500:5432"
+    restart: always
+
+volumes:
+  pgdata:
