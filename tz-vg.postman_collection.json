@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "1767f638-f451-47e4-b84b-caecd04c6385",
+		"name": "tz-vg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24515554"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Сделать тз\",\r\n    \"description\": \"Нужно сделать тз\",\r\n    \"dueDate\": \"2024-09-06T22:55:16.5884248+03:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/tasks/3"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Купить молоко\",\r\n    \"description\": \"Нужно купить в магазине молоко\",\r\n    \"dueDate\": \"2024-09-06T22:55:16.5884248+03:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/tasks/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:4000/tasks/1"
+			},
+			"response": []
+		}
+	]
+}
